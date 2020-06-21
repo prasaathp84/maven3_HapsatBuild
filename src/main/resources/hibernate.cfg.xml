@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">  
+  
+<hibernate-configuration>  
+    <session-factory>  
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+ 
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost\SQLEXPRESS;database=CustomerOrder</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">admin</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <!-- Specifying Session Context -->
+        <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+        <mapping class="com.maven3.Database.CustomerOrders"/>
+        <mapping class="com.maven3.DbModels.UserInfo"/>
+    </session-factory>  
+</hibernate-configuration>  

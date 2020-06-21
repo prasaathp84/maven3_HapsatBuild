@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <condition property="war.exists">
+    <available file="${tomcat.webapp}/mavenproject3.war" type="file"/>
+  </condition>
+  <echo>${tomcat.bin}</echo>
+</target>
+</project>
